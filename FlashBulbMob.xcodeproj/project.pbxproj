@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA1F37D61C8F6A4800D640FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */; };
+		AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D71C8F6A4800D640FB /* ViewController.swift */; };
+		AA1F37DB1C8F6A4800D640FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F37D91C8F6A4800D640FB /* Main.storyboard */; };
+		AA1F37DD1C8F6A4800D640FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1F37DC1C8F6A4800D640FB /* Assets.xcassets */; };
+		AA1F37E01C8F6A4800D640FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F37DE1C8F6A4800D640FB /* LaunchScreen.storyboard */; };
+		AA1F37EB1C8F6A4800D640FB /* FlashBulbMobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37EA1C8F6A4800D640FB /* FlashBulbMobTests.swift */; };
+		AA1F37F61C8F6A4800D640FB /* FlashBulbMobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37F51C8F6A4800D640FB /* FlashBulbMobUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA1F37E71C8F6A4800D640FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA1F37CA1C8F6A4800D640FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA1F37D11C8F6A4800D640FB;
+			remoteInfo = FlashBulbMob;
+		};
+		AA1F37F21C8F6A4800D640FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA1F37CA1C8F6A4800D640FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA1F37D11C8F6A4800D640FB;
+			remoteInfo = FlashBulbMob;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA1F37D21C8F6A4800D640FB /* FlashBulbMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBulbMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA1F37D71C8F6A4800D640FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA1F37DA1C8F6A4800D640FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA1F37DC1C8F6A4800D640FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA1F37DF1C8F6A4800D640FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA1F37E11C8F6A4800D640FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1F37E61C8F6A4800D640FB /* FlashBulbMobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashBulbMobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1F37EA1C8F6A4800D640FB /* FlashBulbMobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashBulbMobTests.swift; sourceTree = "<group>"; };
+		AA1F37EC1C8F6A4800D640FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA1F37F11C8F6A4800D640FB /* FlashBulbMobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashBulbMobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1F37F51C8F6A4800D640FB /* FlashBulbMobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashBulbMobUITests.swift; sourceTree = "<group>"; };
+		AA1F37F71C8F6A4800D640FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA1F37CF1C8F6A4800D640FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37E31C8F6A4800D640FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37EE1C8F6A4800D640FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA1F37C91C8F6A4800D640FB = {
+			isa = PBXGroup;
+			children = (
+				AA1F37D41C8F6A4800D640FB /* FlashBulbMob */,
+				AA1F37E91C8F6A4800D640FB /* FlashBulbMobTests */,
+				AA1F37F41C8F6A4800D640FB /* FlashBulbMobUITests */,
+				AA1F37D31C8F6A4800D640FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA1F37D31C8F6A4800D640FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F37D21C8F6A4800D640FB /* FlashBulbMob.app */,
+				AA1F37E61C8F6A4800D640FB /* FlashBulbMobTests.xctest */,
+				AA1F37F11C8F6A4800D640FB /* FlashBulbMobUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA1F37D41C8F6A4800D640FB /* FlashBulbMob */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */,
+				AA1F37D71C8F6A4800D640FB /* ViewController.swift */,
+				AA1F37D91C8F6A4800D640FB /* Main.storyboard */,
+				AA1F37DC1C8F6A4800D640FB /* Assets.xcassets */,
+				AA1F37DE1C8F6A4800D640FB /* LaunchScreen.storyboard */,
+				AA1F37E11C8F6A4800D640FB /* Info.plist */,
+			);
+			path = FlashBulbMob;
+			sourceTree = "<group>";
+		};
+		AA1F37E91C8F6A4800D640FB /* FlashBulbMobTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F37EA1C8F6A4800D640FB /* FlashBulbMobTests.swift */,
+				AA1F37EC1C8F6A4800D640FB /* Info.plist */,
+			);
+			path = FlashBulbMobTests;
+			sourceTree = "<group>";
+		};
+		AA1F37F41C8F6A4800D640FB /* FlashBulbMobUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F37F51C8F6A4800D640FB /* FlashBulbMobUITests.swift */,
+				AA1F37F71C8F6A4800D640FB /* Info.plist */,
+			);
+			path = FlashBulbMobUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA1F37D11C8F6A4800D640FB /* FlashBulbMob */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA1F37FA1C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMob" */;
+			buildPhases = (
+				AA1F37CE1C8F6A4800D640FB /* Sources */,
+				AA1F37CF1C8F6A4800D640FB /* Frameworks */,
+				AA1F37D01C8F6A4800D640FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlashBulbMob;
+			productName = FlashBulbMob;
+			productReference = AA1F37D21C8F6A4800D640FB /* FlashBulbMob.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA1F37E51C8F6A4800D640FB /* FlashBulbMobTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA1F37FD1C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMobTests" */;
+			buildPhases = (
+				AA1F37E21C8F6A4800D640FB /* Sources */,
+				AA1F37E31C8F6A4800D640FB /* Frameworks */,
+				AA1F37E41C8F6A4800D640FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA1F37E81C8F6A4800D640FB /* PBXTargetDependency */,
+			);
+			name = FlashBulbMobTests;
+			productName = FlashBulbMobTests;
+			productReference = AA1F37E61C8F6A4800D640FB /* FlashBulbMobTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA1F37F01C8F6A4800D640FB /* FlashBulbMobUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA1F38001C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMobUITests" */;
+			buildPhases = (
+				AA1F37ED1C8F6A4800D640FB /* Sources */,
+				AA1F37EE1C8F6A4800D640FB /* Frameworks */,
+				AA1F37EF1C8F6A4800D640FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA1F37F31C8F6A4800D640FB /* PBXTargetDependency */,
+			);
+			name = FlashBulbMobUITests;
+			productName = FlashBulbMobUITests;
+			productReference = AA1F37F11C8F6A4800D640FB /* FlashBulbMobUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA1F37CA1C8F6A4800D640FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Steve Goldman";
+				TargetAttributes = {
+					AA1F37D11C8F6A4800D640FB = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					AA1F37E51C8F6A4800D640FB = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = AA1F37D11C8F6A4800D640FB;
+					};
+					AA1F37F01C8F6A4800D640FB = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = AA1F37D11C8F6A4800D640FB;
+					};
+				};
+			};
+			buildConfigurationList = AA1F37CD1C8F6A4800D640FB /* Build configuration list for PBXProject "FlashBulbMob" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA1F37C91C8F6A4800D640FB;
+			productRefGroup = AA1F37D31C8F6A4800D640FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA1F37D11C8F6A4800D640FB /* FlashBulbMob */,
+				AA1F37E51C8F6A4800D640FB /* FlashBulbMobTests */,
+				AA1F37F01C8F6A4800D640FB /* FlashBulbMobUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA1F37D01C8F6A4800D640FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1F37E01C8F6A4800D640FB /* LaunchScreen.storyboard in Resources */,
+				AA1F37DD1C8F6A4800D640FB /* Assets.xcassets in Resources */,
+				AA1F37DB1C8F6A4800D640FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37E41C8F6A4800D640FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37EF1C8F6A4800D640FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA1F37CE1C8F6A4800D640FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */,
+				AA1F37D61C8F6A4800D640FB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37E21C8F6A4800D640FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1F37EB1C8F6A4800D640FB /* FlashBulbMobTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA1F37ED1C8F6A4800D640FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1F37F61C8F6A4800D640FB /* FlashBulbMobUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA1F37E81C8F6A4800D640FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA1F37D11C8F6A4800D640FB /* FlashBulbMob */;
+			targetProxy = AA1F37E71C8F6A4800D640FB /* PBXContainerItemProxy */;
+		};
+		AA1F37F31C8F6A4800D640FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA1F37D11C8F6A4800D640FB /* FlashBulbMob */;
+			targetProxy = AA1F37F21C8F6A4800D640FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA1F37D91C8F6A4800D640FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA1F37DA1C8F6A4800D640FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA1F37DE1C8F6A4800D640FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA1F37DF1C8F6A4800D640FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA1F37F81C8F6A4800D640FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA1F37F91C8F6A4800D640FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA1F37FB1C8F6A4800D640FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlashBulbMob/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA1F37FC1C8F6A4800D640FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlashBulbMob/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AA1F37FE1C8F6A4800D640FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlashBulbMobTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashBulbMob.app/FlashBulbMob";
+			};
+			name = Debug;
+		};
+		AA1F37FF1C8F6A4800D640FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FlashBulbMobTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashBulbMob.app/FlashBulbMob";
+			};
+			name = Release;
+		};
+		AA1F38011C8F6A4800D640FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlashBulbMobUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMobUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlashBulbMob;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AA1F38021C8F6A4800D640FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FlashBulbMobUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMobUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FlashBulbMob;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA1F37CD1C8F6A4800D640FB /* Build configuration list for PBXProject "FlashBulbMob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1F37F81C8F6A4800D640FB /* Debug */,
+				AA1F37F91C8F6A4800D640FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA1F37FA1C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1F37FB1C8F6A4800D640FB /* Debug */,
+				AA1F37FC1C8F6A4800D640FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA1F37FD1C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMobTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1F37FE1C8F6A4800D640FB /* Debug */,
+				AA1F37FF1C8F6A4800D640FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA1F38001C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMobUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1F38011C8F6A4800D640FB /* Debug */,
+				AA1F38021C8F6A4800D640FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA1F37CA1C8F6A4800D640FB /* Project object */;
+}
