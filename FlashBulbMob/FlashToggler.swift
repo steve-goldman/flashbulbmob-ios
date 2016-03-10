@@ -75,6 +75,34 @@ class FlashToggler {
         }
     }
 
+    func setTorchLevel(level: Float) {
+        print("setting torch level: \(level)")
+        lockDeviceForConfiguration()
+        do {
+            try device.setTorchModeOnWithLevel(level)
+        }
+        catch {
+            print("unable to set torch level")
+        }
+        device.unlockForConfiguration()
+    }
+
+    func increaseTorchLevel(delta: Float) {
+        print("increasing torch level: \(delta)")
+        var newLevel = device.torchLevel + delta
+        if newLevel > 0 {
+            while newLevel > 1.0 {
+                newLevel -= 1.0
+            }
+        }
+        else {
+            while newLevel < 0.0 {
+                newLevel += 1.0
+            }
+        }
+        setTorchLevel(newLevel)
+    }
+
     private func _toggleOn() {
         print("turning torch on")
         lockDeviceForConfiguration()
@@ -96,16 +124,6 @@ class FlashToggler {
         }
         catch {
             return false
-        }
-    }
-
-    private func setTorchLevel(level: Float) {
-        do {
-            try device.setTorchModeOnWithLevel(level)
-        }
-        catch {
-            print("unable to set torch level")
-            return
         }
     }
 }
