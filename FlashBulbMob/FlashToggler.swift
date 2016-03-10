@@ -76,7 +76,7 @@ class FlashToggler {
     }
 
     func setTorchLevel(level: Float) {
-        print("setting torch level: \(level)")
+        //print("setting torch level: \(level)")
         lockDeviceForConfiguration()
         do {
             try device.setTorchModeOnWithLevel(level)
@@ -88,7 +88,7 @@ class FlashToggler {
     }
 
     func increaseTorchLevel(delta: Float) {
-        print("increasing torch level: \(delta)")
+        //print("increasing torch level: \(delta)")
         var newLevel = device.torchLevel + delta
         if newLevel > 0 {
             while newLevel > 1.0 {
@@ -104,14 +104,14 @@ class FlashToggler {
     }
 
     private func _toggleOn() {
-        print("turning torch on")
+        //print("turning torch on")
         lockDeviceForConfiguration()
         device.torchMode = AVCaptureTorchMode.On
         device.unlockForConfiguration()
     }
 
     private func _toggleOff() {
-        print("turning torch off")
+        //print("turning torch off")
         lockDeviceForConfiguration()
         device.torchMode = AVCaptureTorchMode.Off
         device.unlockForConfiguration()
