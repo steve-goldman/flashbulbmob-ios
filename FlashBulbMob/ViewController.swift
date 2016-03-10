@@ -30,9 +30,9 @@ class ViewController: UIViewController {
     }
 
     func onTimer() {
-        let startTime = currentTimeMillis()
+        let startTime = currentTimeMicros()
         flashToggler.toggle()
-        let delta = currentTimeMillis() - startTime
+        let delta = currentTimeMicros() - startTime
         if flashToggler.isTorchOn() {
             onDeltas.append(delta)
         }
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         }
     }
 
-    private func currentTimeMillis() -> Int64 {
+    private func currentTimeMicros() -> Int64 {
         return Int64(NSDate.timeIntervalSinceReferenceDate() * 1000000.0)
     }
 }
