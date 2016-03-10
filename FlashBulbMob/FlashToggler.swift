@@ -51,10 +51,10 @@ class FlashToggler {
     func toggle() {
         if initialized {
             if isTorchOn() {
-                toggleOff()
+                _toggleOff()
             }
             else {
-                toggleOn()
+                _toggleOn()
             }
         }
     }
@@ -62,11 +62,7 @@ class FlashToggler {
     func toggleOn() {
         if initialized {
             if !isTorchOn() {
-                print("turning torch on")
-                lockDeviceForConfiguration()
-                //setTorchLevel(AVCaptureMaxAvailableTorchLevel)
-                device.torchMode = AVCaptureTorchMode.On
-                device.unlockForConfiguration()
+                _toggleOn()
             }
         }
     }
@@ -74,12 +70,23 @@ class FlashToggler {
     func toggleOff() {
         if initialized {
             if isTorchOn() {
-                print("turning torch off")
-                lockDeviceForConfiguration()
-                device.torchMode = AVCaptureTorchMode.Off
-                device.unlockForConfiguration()
+                _toggleOff()
             }
         }
+    }
+
+    private func _toggleOn() {
+        print("turning torch on")
+        lockDeviceForConfiguration()
+        device.torchMode = AVCaptureTorchMode.On
+        device.unlockForConfiguration()
+    }
+
+    private func _toggleOff() {
+        print("turning torch off")
+        lockDeviceForConfiguration()
+        device.torchMode = AVCaptureTorchMode.Off
+        device.unlockForConfiguration()
     }
 
     private func lockDeviceForConfiguration() -> Bool {
