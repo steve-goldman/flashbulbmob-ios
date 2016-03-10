@@ -45,7 +45,7 @@ class FlashToggler {
     }
 
     func isTorchOn() -> Bool {
-        return device.torchLevel > 0.00001
+        return device.torchMode == AVCaptureTorchMode.On
     }
 
     func toggle() {
