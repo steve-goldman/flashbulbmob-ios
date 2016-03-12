@@ -9,53 +9,49 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var flashToggler: FlashToggler = { return FlashToggler() }()
-    var repeatingTimer: NSTimer!
-    var onDeltas = [Int64]()
-    var offDeltas = [Int64]()
-    @IBOutlet weak var button: UIButton!
+    let N = 100
+
+    lazy var flashToggler: FlashToggler = { return FlashToggler() }()
+    @IBOutlet weak var toggleButton: UIButton!
+    @IBOutlet weak var pulseButton: UIButton!
+    @IBOutlet weak var pulseNTimesButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pulseNTimesButton.setTitle("Pulse \(N) Times", forState: UIControlState.Normal)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func pressed() {
-        button.enabled = false
-        repeatingTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "onTimer", userInfo: nil, repeats: true)
-        NSTimer.scheduledTimerWithTimeInterval(100.0, target: self, selector: "endTimer", userInfo: nil, repeats: false)
+    @IBAction func togglePressed() {
+        enableButtons(false)
+        toggle(1)
+        enableButtons(true)
     }
 
-    func onTimer() {
-        let startTime = currentTimeMicros()
-        flashToggler.toggle()
-        let delta = currentTimeMicros() - startTime
-        if flashToggler.isTorchOn() {
-            onDeltas.append(delta)
-        }
-        else {
-            offDeltas.append(delta)
-        }
+    @IBAction func pulsePressed() {
+        enableButtons(false)
+        toggle(2)
+        enableButtons(true)
     }
 
-    func endTimer() {
-        repeatingTimer.invalidate()
-        repeatingTimer = nil
-        button.enabled = true
-        print("ON : \(onDeltas.count) samples")
-        for sample in onDeltas {
-            print(sample)
-        }
-        print("OFF: \(offDeltas.count) samples")
-        for sample in offDeltas {
-            print(sample)
+    @IBAction func pulseNTimesPressed(sender: AnyObject) {
+        enableButtons(false)
+        toggle(2 * N)
+        enableButtons(true)
+    }
+
+    private func toggle(numTimes: Int) {
+        for _ in 1...numTimes {
+            flashToggler.toggle()
         }
     }
 
-    private func currentTimeMicros() -> Int64 {
-        return Int64(NSDate.timeIntervalSinceReferenceDate() * 1000000.0)
+    private func enableButtons(enabled: Bool) {
+        toggleButton.enabled = enabled
+        pulseButton.enabled = enabled
+        pulseNTimesButton.enabled = enabled
     }
 }

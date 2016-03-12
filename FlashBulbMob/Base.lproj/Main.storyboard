@@ -18,25 +18,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZO-qL-EEO">
-                                <rect key="frame" x="268" y="285" width="64" height="30"/>
-                                <state key="normal" title="Press Me"/>
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Pulse"/>
                                 <connections>
-                                    <action selector="pressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTY-Hl-tEb"/>
+                                    <action selector="pulsePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbY-XC-LS9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jX-sJ-oX1">
+                                <rect key="frame" x="277" y="155" width="47" height="30"/>
+                                <state key="normal" title="Toggle"/>
+                                <connections>
+                                    <action selector="togglePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="3D1-ee-r8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iz-jX-7fV">
+                                <rect key="frame" x="252" y="415" width="96" height="30"/>
+                                <state key="normal" title="Pulse 5 Times"/>
+                                <connections>
+                                    <action selector="pulseNTimesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUp-wj-gLe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8iz-jX-7fV" firstAttribute="top" secondItem="nZO-qL-EEO" secondAttribute="bottom" constant="100" id="GBc-sF-Ciy"/>
+                            <constraint firstItem="1jX-sJ-oX1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MwK-i7-sgb"/>
+                            <constraint firstItem="1jX-sJ-oX1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oq9-Pw-Xm7"/>
                             <constraint firstItem="nZO-qL-EEO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="agl-xE-1po"/>
                             <constraint firstItem="nZO-qL-EEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccI-ke-tKZ"/>
+                            <constraint firstItem="nZO-qL-EEO" firstAttribute="top" secondItem="1jX-sJ-oX1" secondAttribute="bottom" constant="100" id="vyI-0c-isL"/>
+                            <constraint firstItem="8iz-jX-7fV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yQQ-wy-z4C"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Oq9-Pw-Xm7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="button" destination="nZO-qL-EEO" id="Ew2-e0-cKq"/>
+                        <outlet property="pulseButton" destination="nZO-qL-EEO" id="luA-5M-f0L"/>
+                        <outlet property="pulseNTimesButton" destination="8iz-jX-7fV" id="TTI-9S-XDu"/>
+                        <outlet property="toggleButton" destination="1jX-sJ-oX1" id="nnt-d3-tFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="565" y="348"/>
         </scene>
     </scenes>
 </document>
