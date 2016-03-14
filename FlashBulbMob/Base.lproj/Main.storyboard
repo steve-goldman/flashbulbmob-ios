@@ -35,7 +35,7 @@
                                 <rect key="frame" x="252" y="415" width="96" height="30"/>
                                 <state key="normal" title="Pulse 5 Times"/>
                                 <connections>
-                                    <action selector="pulseNTimesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUp-wj-gLe"/>
+                                    <action selector="pulseNTimesPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jI-LN-Xq3"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         enableButtons(true)
     }
 
-    @IBAction func pulseNTimesPressed(sender: AnyObject) {
+    @IBAction func pulseNTimesPressed() {
         enableButtons(false)
         toggle(2 * N)
         enableButtons(true)
