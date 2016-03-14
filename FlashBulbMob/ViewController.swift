@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let N = 100
+    let N = 1000
 
     lazy var flashToggler: FlashToggler = { return FlashToggler() }()
     @IBOutlet weak var toggleButton: UIButton!
@@ -26,27 +26,50 @@ class ViewController: UIViewController {
     }
 
     @IBAction func togglePressed() {
-        enableButtons(false)
-        toggle(1)
-        enableButtons(true)
+        wrapButtonEnablement() {
+            self.wrapTimer() {
+                self.toggle(1)
+            }
+        }
     }
 
     @IBAction func pulsePressed() {
-        enableButtons(false)
-        toggle(2)
-        enableButtons(true)
+        wrapButtonEnablement() {
+            self.wrapTimer() {
+                self.toggle(2)
+            }
+        }
     }
 
     @IBAction func pulseNTimesPressed() {
-        enableButtons(false)
-        toggle(2 * N)
-        enableButtons(true)
+        wrapButtonEnablement() {
+            self.wrapTimer() {
+                self.toggle(2 * self.N)
+            }
+        }
     }
 
     private func toggle(numTimes: Int) {
         for _ in 1...numTimes {
             flashToggler.toggle()
         }
+    }
+
+    private func wrapButtonEnablement(action: () -> Void) {
+        enableButtons(false)
+        action()
+        enableButtons(true)
+    }
+
+    private func wrapTimer(action: () -> Void) {
+        let startTime = nowMicros()
+        action()
+        let delta = nowMicros() - startTime
+        print("Last operation took: \(delta)ms")
+    }
+
+    private func nowMicros() -> Int64 {
+        return Int64(NSDate.timeIntervalSinceReferenceDate() * 1000000.0)
     }
 
     private func enableButtons(enabled: Bool) {
