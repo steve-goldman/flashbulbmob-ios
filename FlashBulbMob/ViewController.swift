@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     let N = 1000
 
-    lazy var flashToggler: FlashToggler = { return FlashToggler() }()
+    var flashToggler: FlashToggler! = nil
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var pulseButton: UIButton!
     @IBOutlet weak var pulseNTimesButton: UIButton!
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pulseNTimesButton.setTitle("Pulse \(N) Times", forState: UIControlState.Normal)
+        flashToggler = FlashToggler()
     }
 
     override func didReceiveMemoryWarning() {

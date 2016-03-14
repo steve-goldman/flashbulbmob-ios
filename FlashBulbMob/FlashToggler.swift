@@ -10,46 +10,48 @@ import Foundation
 import AVFoundation
 
 class FlashToggler {
-    let device: AVCaptureDevice
-    let session: AVCaptureSession!
-    var initialized = false
+    private var device: AVCaptureDevice?
 
     init() {
         device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
-        if device.hasTorch {
+        if device != nil && device!.hasTorch {
             print("device has torch")
             let flashInput = try? AVCaptureDeviceInput(device: device)
             let output = AVCaptureVideoDataOutput()
-            session = AVCaptureSession()
+            let session = AVCaptureSession()
 
             session.beginConfiguration()
             if !lockDeviceForConfiguration() {
                 print("exiting early due to 'lockForConfiguration'")
+                device = nil
                 return
             }
 
             session.addInput(flashInput)
             session.addOutput(output)
 
-            device.unlockForConfiguration()
+            device!.unlockForConfiguration()
 
             session.commitConfiguration()
             session.startRunning()
 
             print("initialized")
-            initialized = true
         }
         else {
-            session = nil
+            device = nil
         }
+    }
+
+    func initialized() -> Bool {
+        return device != nil
     }
 
     func isTorchOn() -> Bool {
-        return device.torchMode == AVCaptureTorchMode.On
+        return initialized() && device!.torchMode == AVCaptureTorchMode.On
     }
 
     func toggle() {
-        if initialized {
+        if initialized() {
             if isTorchOn() {
                 _toggleOff()
             }
@@ -60,7 +62,7 @@ class FlashToggler {
     }
 
     func toggleOn() {
-        if initialized {
+        if initialized() {
             if !isTorchOn() {
                 _toggleOn()
             }
@@ -68,7 +70,7 @@ class FlashToggler {
     }
 
     func toggleOff() {
-        if initialized {
+        if initialized() {
             if isTorchOn() {
                 _toggleOff()
             }
@@ -76,50 +78,54 @@ class FlashToggler {
     }
 
     func setTorchLevel(level: Float) {
-        //print("setting torch level: \(level)")
-        lockDeviceForConfiguration()
-        do {
-            try device.setTorchModeOnWithLevel(level)
+        if initialized() {
+            //print("setting torch level: \(level)")
+            lockDeviceForConfiguration()
+            do {
+                try device!.setTorchModeOnWithLevel(level)
+            }
+            catch {
+                print("unable to set torch level")
+            }
+            device!.unlockForConfiguration()
         }
-        catch {
-            print("unable to set torch level")
-        }
-        device.unlockForConfiguration()
     }
 
     func increaseTorchLevel(delta: Float) {
-        //print("increasing torch level: \(delta)")
-        var newLevel = device.torchLevel + delta
-        if newLevel > 0 {
-            while newLevel > 1.0 {
-                newLevel -= 1.0
+        if initialized() {
+            //print("increasing torch level: \(delta)")
+            var newLevel = device!.torchLevel + delta
+            if newLevel > 0 {
+                while newLevel > 1.0 {
+                    newLevel -= 1.0
+                }
             }
-        }
-        else {
-            while newLevel < 0.0 {
-                newLevel += 1.0
+            else {
+                while newLevel < 0.0 {
+                    newLevel += 1.0
+                }
             }
+            setTorchLevel(newLevel)
         }
-        setTorchLevel(newLevel)
     }
 
     private func _toggleOn() {
         //print("turning torch on")
         lockDeviceForConfiguration()
-        device.torchMode = AVCaptureTorchMode.On
-        device.unlockForConfiguration()
+        device!.torchMode = AVCaptureTorchMode.On
+        device!.unlockForConfiguration()
     }
 
     private func _toggleOff() {
         //print("turning torch off")
         lockDeviceForConfiguration()
-        device.torchMode = AVCaptureTorchMode.Off
-        device.unlockForConfiguration()
+        device!.torchMode = AVCaptureTorchMode.Off
+        device!.unlockForConfiguration()
     }
 
     private func lockDeviceForConfiguration() -> Bool {
         do {
-            try device.lockForConfiguration()
+            try device!.lockForConfiguration()
             return true
         }
         catch {
