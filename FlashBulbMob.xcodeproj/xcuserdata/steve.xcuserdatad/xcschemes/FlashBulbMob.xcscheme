@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB984509E7C60F636B045838F8A6A09A"
+               BuildableName = "Pods_FlashBulbMob.framework"
+               BlueprintName = "Pods-FlashBulbMob"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA1F37D11C8F6A4800D640FB"
                BuildableName = "FlashBulbMob.app"
                BlueprintName = "FlashBulbMob"

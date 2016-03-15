@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0A379BD426DB6DC007CF17 /* Pods_FlashBulbMob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEC916F267D046ABD36E5B3 /* Pods_FlashBulbMob.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		AA1F37D61C8F6A4800D640FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */; };
 		AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D71C8F6A4800D640FB /* ViewController.swift */; };
 		AA1F37DB1C8F6A4800D640FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F37D91C8F6A4800D640FB /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		AA1F37F61C8F6A4800D640FB /* FlashBulbMobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37F51C8F6A4800D640FB /* FlashBulbMobUITests.swift */; };
 		AA1F38041C8F71AB00D640FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1F38031C8F71AB00D640FB /* AVFoundation.framework */; };
 		AA1F38061C90EB9D00D640FB /* FlashToggler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F38051C90EB9D00D640FB /* FlashToggler.swift */; };
+		AA93C6411C98AD7C003015C2 /* FlashUdpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93C6401C98AD7C003015C2 /* FlashUdpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F348A5A607BFBDF80D0ED54 /* Pods-FlashBulbMob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashBulbMob.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashBulbMob/Pods-FlashBulbMob.release.xcconfig"; sourceTree = "<group>"; };
+		1CEC916F267D046ABD36E5B3 /* Pods_FlashBulbMob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashBulbMob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		432381F169E7647AC076C8D7 /* Pods-FlashBulbMob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashBulbMob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashBulbMob/Pods-FlashBulbMob.debug.xcconfig"; sourceTree = "<group>"; };
 		AA1F37D21C8F6A4800D640FB /* FlashBulbMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBulbMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1F37D71C8F6A4800D640FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		AA1F37F71C8F6A4800D640FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA1F38031C8F71AB00D640FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AA1F38051C90EB9D00D640FB /* FlashToggler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashToggler.swift; sourceTree = "<group>"; };
+		AA93C6401C98AD7C003015C2 /* FlashUdpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashUdpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1F38041C8F71AB00D640FB /* AVFoundation.framework in Frameworks */,
+				1F0A379BD426DB6DC007CF17 /* Pods_FlashBulbMob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		566C53DB9D06262C31E72C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CEC916F267D046ABD36E5B3 /* Pods_FlashBulbMob.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA1F37C91C8F6A4800D640FB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,8 @@
 				AA1F37E91C8F6A4800D640FB /* FlashBulbMobTests */,
 				AA1F37F41C8F6A4800D640FB /* FlashBulbMobUITests */,
 				AA1F37D31C8F6A4800D640FB /* Products */,
+				BDB97ADCBB1F04792C7D99C1 /* Pods */,
+				566C53DB9D06262C31E72C5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +127,7 @@
 				AA1F37DE1C8F6A4800D640FB /* LaunchScreen.storyboard */,
 				AA1F37E11C8F6A4800D640FB /* Info.plist */,
 				AA1F38051C90EB9D00D640FB /* FlashToggler.swift */,
+				AA93C6401C98AD7C003015C2 /* FlashUdpClient.swift */,
 			);
 			path = FlashBulbMob;
 			sourceTree = "<group>";
@@ -132,6 +150,15 @@
 			path = FlashBulbMobUITests;
 			sourceTree = "<group>";
 		};
+		BDB97ADCBB1F04792C7D99C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				432381F169E7647AC076C8D7 /* Pods-FlashBulbMob.debug.xcconfig */,
+				0F348A5A607BFBDF80D0ED54 /* Pods-FlashBulbMob.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1F37FA1C8F6A4800D640FB /* Build configuration list for PBXNativeTarget "FlashBulbMob" */;
 			buildPhases = (
+				138FA829EC593DB574FC9E7C /* Check Pods Manifest.lock */,
 				AA1F37CE1C8F6A4800D640FB /* Sources */,
 				AA1F37CF1C8F6A4800D640FB /* Frameworks */,
 				AA1F37D01C8F6A4800D640FB /* Resources */,
+				7D04EA1BE2CF831AB4CE6484 /* Embed Pods Frameworks */,
+				706B90E97CB40A94FD6644AF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,12 +289,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		138FA829EC593DB574FC9E7C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		706B90E97CB40A94FD6644AF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashBulbMob/Pods-FlashBulbMob-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D04EA1BE2CF831AB4CE6484 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashBulbMob/Pods-FlashBulbMob-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA1F37CE1C8F6A4800D640FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AA1F38061C90EB9D00D640FB /* FlashToggler.swift in Sources */,
+				AA93C6411C98AD7C003015C2 /* FlashUdpClient.swift in Sources */,
 				AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */,
 				AA1F37D61C8F6A4800D640FB /* AppDelegate.swift in Sources */,
 			);
@@ -406,13 +485,14 @@
 		};
 		AA1F37FB1C8F6A4800D640FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432381F169E7647AC076C8D7 /* Pods-FlashBulbMob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashBulbMob/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,13 +502,14 @@
 		};
 		AA1F37FC1C8F6A4800D640FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F348A5A607BFBDF80D0ED54 /* Pods-FlashBulbMob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FlashBulbMob/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.constantbeta.FlashBulbMob;
 				PRODUCT_NAME = "$(TARGET_NAME)";

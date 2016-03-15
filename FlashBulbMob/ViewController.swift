@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FlashUdpClientDelegate {
     let N = 1000
+    let SERVER_ADDRESS = "192.168.0.3"
+    let SERVER_PORT: UInt16 = 12345
 
     var flashToggler: FlashToggler! = nil
+    var udpClient: FlashUdpClient! = nil
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var pulseButton: UIButton!
     @IBOutlet weak var pulseNTimesButton: UIButton!
@@ -19,7 +22,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pulseNTimesButton.setTitle("Pulse \(N) Times", forState: UIControlState.Normal)
-        flashToggler = FlashToggler()
+        if (flashToggler == nil) {
+            flashToggler = FlashToggler()
+        }
+        if (udpClient == nil) {
+            udpClient = FlashUdpClient(delegate: self, address: SERVER_ADDRESS, port: SERVER_PORT)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +37,7 @@ class ViewController: UIViewController {
     @IBAction func togglePressed() {
         wrapButtonEnablement() {
             self.wrapTimer() {
-                self.toggle(1)
+                self.toggle()
             }
         }
     }
@@ -37,7 +45,7 @@ class ViewController: UIViewController {
     @IBAction func pulsePressed() {
         wrapButtonEnablement() {
             self.wrapTimer() {
-                self.toggle(2)
+                self.pulse()
             }
         }
     }
@@ -45,12 +53,36 @@ class ViewController: UIViewController {
     @IBAction func pulseNTimesPressed() {
         wrapButtonEnablement() {
             self.wrapTimer() {
-                self.toggle(2 * self.N)
+                self.pulseNTimes()
             }
         }
     }
 
-    private func toggle(numTimes: Int) {
+    func flashUdpClientToggle(client: FlashUdpClient) {
+        toggle()
+    }
+
+    func flashUdpClientPulse(client: FlashUdpClient) {
+        pulse()
+    }
+
+    func flashUdpClientPulseNTimes(client: FlashUdpClient) {
+        pulseNTimes()
+    }
+
+    private func toggle() {
+        toggleNTimes(1)
+    }
+
+    private func pulse() {
+        toggleNTimes(2)
+    }
+
+    private func pulseNTimes() {
+        toggleNTimes(2 * N)
+    }
+
+    private func toggleNTimes(numTimes: Int) {
         for _ in 1...numTimes {
             flashToggler.toggle()
         }
