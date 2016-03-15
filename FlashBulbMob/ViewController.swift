@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         let startTime = nowMicros()
         action()
         let delta = nowMicros() - startTime
-        print("Last operation took: \(delta)ms")
+        print("Last operation took: \(delta)us")
     }
 
     private func nowMicros() -> Int64 {
