@@ -150,7 +150,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="startPressed" destination="0pG-iR-SGj" eventType="touchUpInside" id="EMB-Ot-6nh"/>
                                     <action selector="stopPressed" destination="0pG-iR-SGj" eventType="touchUpInside" id="EvY-RI-Jec"/>
                                 </connections>
                             </button>

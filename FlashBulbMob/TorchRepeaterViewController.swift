@@ -19,6 +19,8 @@ class TorchRepeaterViewController: UIViewController {
     @IBOutlet weak var cannotStartButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
 
+    private var torchRepeater: TorchRepeater? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTimesRange.text! = "Times must be between \(MinMillis) and \(MaxMillis)"
@@ -31,7 +33,7 @@ class TorchRepeaterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction func inputChanged() {
         if canStart() {
             cannotStartButton.hidden = true
@@ -46,9 +48,14 @@ class TorchRepeaterViewController: UIViewController {
         dismissKeyboard()
         disableAndHide(button: canStartButton)
         enableAndShow(button: stopButton)
+        disableInputs()
+        torchRepeater = TorchRepeater(onMillis: onMillis()!, offMillis: offMillis()!)
+        torchRepeater!.start()
     }
 
     @IBAction func stopPressed() {
+        torchRepeater!.stop()
+        enableInputs()
         disableAndHide(button: stopButton)
         enableAndShow(button: canStartButton)
     }
@@ -62,7 +69,11 @@ class TorchRepeaterViewController: UIViewController {
     }
 
     private func canStart() -> Bool {
-        return onMillis() != nil && offMillis() != nil && onMillis() >= MinMillis && onMillis() <= MaxMillis && offMillis() >= MinMillis && offMillis() <= MaxMillis
+        return validTime(onMillis()) && validTime(offMillis())
+    }
+
+    private func validTime(millis: Int?) -> Bool {
+        return millis != nil && millis >= MinMillis && millis <= MaxMillis
     }
 
     private func disableAndHide(button button: UIButton) {
@@ -73,6 +84,16 @@ class TorchRepeaterViewController: UIViewController {
     private func enableAndShow(button button: UIButton) {
         button.hidden = false
         button.enabled = true
+    }
+
+    private func disableInputs() {
+        textFieldOnMillis.enabled = false
+        textFieldOffMillis.enabled = false
+    }
+
+    private func enableInputs() {
+        textFieldOnMillis.enabled = true
+        textFieldOffMillis.enabled = true
     }
 
     func dismissKeyboard() {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0A379BD426DB6DC007CF17 /* Pods_FlashBulbMob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEC916F267D046ABD36E5B3 /* Pods_FlashBulbMob.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		AA0FD3A71CA5DBC500A2F22D /* TorchRepeaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0FD3A61CA5DBC500A2F22D /* TorchRepeaterViewController.swift */; };
+		AA0FD3A91CA5EB6E00A2F22D /* TorchRepeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0FD3A81CA5EB6E00A2F22D /* TorchRepeater.swift */; };
 		AA1F37D61C8F6A4800D640FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */; };
 		AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1F37D71C8F6A4800D640FB /* ViewController.swift */; };
 		AA1F37DB1C8F6A4800D640FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1F37D91C8F6A4800D640FB /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		1CEC916F267D046ABD36E5B3 /* Pods_FlashBulbMob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashBulbMob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		432381F169E7647AC076C8D7 /* Pods-FlashBulbMob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashBulbMob.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashBulbMob/Pods-FlashBulbMob.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0FD3A61CA5DBC500A2F22D /* TorchRepeaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorchRepeaterViewController.swift; sourceTree = "<group>"; };
+		AA0FD3A81CA5EB6E00A2F22D /* TorchRepeater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TorchRepeater.swift; sourceTree = "<group>"; };
 		AA1F37D21C8F6A4800D640FB /* FlashBulbMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBulbMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1F37D71C8F6A4800D640FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				AA1F37D51C8F6A4800D640FB /* AppDelegate.swift */,
 				AA1F37D71C8F6A4800D640FB /* ViewController.swift */,
 				AA1F37D91C8F6A4800D640FB /* Main.storyboard */,
+				AA0FD3A81CA5EB6E00A2F22D /* TorchRepeater.swift */,
 				AA1F37DC1C8F6A4800D640FB /* Assets.xcassets */,
 				AA1F37DE1C8F6A4800D640FB /* LaunchScreen.storyboard */,
 				AA1F37E11C8F6A4800D640FB /* Info.plist */,
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0FD3A91CA5EB6E00A2F22D /* TorchRepeater.swift in Sources */,
 				AA1F38061C90EB9D00D640FB /* FlashToggler.swift in Sources */,
 				AA93C6411C98AD7C003015C2 /* FlashUdpClient.swift in Sources */,
 				AA1F37D81C8F6A4800D640FB /* ViewController.swift in Sources */,
